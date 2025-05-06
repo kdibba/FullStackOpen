@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mermaid Diagram Example</title>
+    <!-- Include Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .mermaid {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mermaid Diagram Example</h1>
+    
+    <!-- Example 1: Flowchart -->
+    <div class="mermaid">
+        graph TD
+            A[Start] --> B{Is it working?}
+            B -->|Yes| C[Great!]
+            B -->|No| D[Debug]
+            D --> B
+    </div>
+
+    <!-- Example 2: Sequence Diagram -->
+    <div class="mermaid">
+        sequenceDiagram
+            participant User
+            participant System
+            User->>System: Login Request
+            System->>System: Validate Credentials
+            System-->>User: Login Response
+    </div>
+
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            securityLevel: 'loose'
+        });
+    </script>
+</body>
+</html> 
